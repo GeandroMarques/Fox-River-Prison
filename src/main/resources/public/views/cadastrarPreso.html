@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Prisão Fox River</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/cadastrarPreso.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+    </style>
+</head>
+<body>
+<nav>
+    <a href="menuAdmin.html">Menu Admin</a>
+    <a href="listarPresoFuncionario.html">Procurar Preso</a>
+</nav>
+
+<div class="main-title">
+    <h1>Cadastrar Preso</h1>
+</div>
+
+
+<form id="formCadastroPreso" class="cadastrarPreso">
+    <!-- Dados Pessoais -->
+    <div class="form-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="data_nascimento">Data de Nascimento</label>
+        <input type="date" id="data_nascimento" class="form-control" required>
+    </div>
+    
+    <!-- Dados do Prisioneiro -->
+    <div class="form-group">
+        <label for="pena_meses">Pena (meses)</label>
+        <input type="number" id="pena_meses" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="cela">Número da Cela</label>
+        <input type="number" id="cela" class="form-control" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+
+<div id="mensagem"></div> <!-- Para feedback -->
+
+<script src="../static/js/cadastraPreso.js"></script>
+
+</body>
+</html>

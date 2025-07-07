@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Prisioneiro - Fox River</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+
+        body {
+            font-family: 'Edu QLD Hand', cursive;
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: grey;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+
+        .main-title h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #2c3e50;
+        }
+
+        .main-content {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input.form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="menuAdmin.html">Menu Admin</a>
+    <a href="listarPresoFuncionario.html">Procurar Preso</a>
+    <a href="cadastrarPreso.html">Cadastrar Preso</a>
+</nav>
+
+<div class="main-title">
+    <h1>Editar Prisioneiro</h1>
+</div>
+
+<div class="main-content">
+    <form id="formEditarPreso">
+        <!-- Dados Pessoais -->
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="date" id="data_nascimento" class="form-control" required>
+        </div>
+
+        <!-- Dados do Prisioneiro -->
+        <div class="form-group">
+            <label for="pena_meses">Pena (meses)</label>
+            <input type="number" id="pena_meses" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cela">Número da Cela</label>
+            <input type="number" id="cela" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    </form>
+
+    <div id="mensagem"></div>
+</div>
+
+<script src="../static/js/editarPreso.js"></script>
+</body>
+</html>
