@@ -37,9 +37,3 @@ O projeto segue o padrão **MVC (Model-View-Controller)**:
 - **Controller:** Conecta a lógica do usuário com o modelo e manipula os dados
 
 ---
-
-## ▶️ Como Executar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
